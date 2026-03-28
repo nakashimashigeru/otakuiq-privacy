@@ -21,7 +21,7 @@
 <!-- 日本語 -->
 <section lang="ja">
 <h2>プライバシーポリシー</h2>
-<p>最終更新日: 2026年3月7日</p>
+<p>最終更新日: 2026年3月29日</p>
 
 <p>OtakuIQ（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。本ポリシーでは、本アプリが収集・利用するデータについて説明します。</p>
 
@@ -32,9 +32,23 @@
 <li>クイズの回答履歴・スコア・連続記録</li>
 <li>アプリ設定（テーマ・言語・通知時刻・ミュート状態）</li>
 </ul>
-<p>これらのデータは端末のローカルストレージ（SharedPreferences）にのみ保存され、外部サーバーには送信されません。</p>
+<p>これらのデータは端末のローカルストレージ（SharedPreferences）に保存されます。</p>
 
-<p><strong>(b) Firebase Analytics / Crashlytics</strong></p>
+<p><strong>(b) Google アカウント連携（任意）</strong></p>
+<p>本アプリは任意で Google アカウントとの連携機能を提供しています。連携した場合、以下のデータが Firebase Authentication を通じて収集されます。</p>
+<ul>
+<li>Google アカウントのメールアドレス・表示名・UID</li>
+</ul>
+<p>連携は設定画面からいつでも解除できます。連携しなくてもアプリの全機能を利用できます。</p>
+
+<p><strong>(c) Cloud Firestore（アカウント連携時のみ）</strong></p>
+<p>Google アカウントを連携したユーザーのみ、以下のデータが Google Cloud Firestore に保存されます。</p>
+<ul>
+<li>クイズスコア・バッジ・連続記録・購入状態</li>
+</ul>
+<p>これらのデータはアカウント連携の解除後はアクセスされません。データは再インストール時のデータ復元に使用されます。</p>
+
+<p><strong>(d) Firebase Analytics / Crashlytics</strong></p>
 <p>本アプリは Google Firebase を利用し、以下のデータを匿名で収集します。</p>
 <ul>
 <li>アプリの利用状況（画面遷移、クイズ開始/完了イベント）</li>
@@ -43,14 +57,28 @@
 </ul>
 <p>これらのデータは個人を特定するものではなく、アプリの改善目的でのみ使用します。</p>
 
-<p><strong>(c) Google AdMob</strong></p>
+<p><strong>(e) Google AdMob</strong></p>
 <p>本アプリは広告配信のため Google AdMob を利用しています。AdMob は広告のパーソナライズのために端末の広告 ID（Android の場合は GAID）を使用する場合があります。Android 13 以降では、本アプリは広告 ID へのアクセス許可（AD_ID）を宣言しています。広告 ID は端末の設定からリセットまたは無効化できます。詳細は <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>をご覧ください。</p>
 
+<p><strong>(f) アプリ内課金</strong></p>
+<p>本アプリは Google Play Billing を通じてアプリ内課金を提供しています。決済情報（クレジットカード番号等）は本アプリでは一切収集・保存せず、Google Play が処理します。</p>
+
 <h2>2. データの第三者提供</h2>
-<p>本アプリは、上記 Firebase および AdMob を通じて Google LLC にデータを送信します。それ以外の第三者にユーザーデータを提供・販売することはありません。</p>
+<p>本アプリは、上記 Firebase、AdMob、Google Play Billing を通じて Google LLC にデータを送信します。それ以外の第三者にユーザーデータを提供・販売することはありません。</p>
 
 <h2>3. データの保持と削除</h2>
-<p>端末内のデータは、アプリの設定画面から「データリセット」を実行することでいつでも削除できます。アプリをアンインストールすると、端末内の全データが削除されます。</p>
+
+<p><strong>端末内データの削除</strong></p>
+<p>アプリの設定画面から「データリセット」を実行すると、端末内の全データ（スコア・バッジ・連続記録・設定）を即時削除できます。アプリをアンインストールした場合も、端末内の全データが削除されます。</p>
+
+<p><strong>アカウントとクラウドデータの削除</strong></p>
+<p>Google アカウント連携を解除するには、アプリの設定画面から「アカウント連携解除」をタップしてください。連携を解除すると：</p>
+<ul>
+<li>アプリからクラウドデータ（スコア・バッジ・連続記録・購入状態）へのアクセスが即時停止されます</li>
+<li>Firebase Authentication 上のアカウント情報（メールアドレス・表示名・UID）は連携解除と同時に無効化されます</li>
+<li>Firestore 上のデータは、セキュリティルールにより本人以外アクセスできない状態で最大 180 日間保持された後、自動的に削除されます</li>
+</ul>
+<p>即時のデータ削除をご希望の場合は、<a href="https://ko-fi.com/otakuiq">お問い合わせ</a>よりご連絡ください。30 日以内に対応いたします。</p>
 
 <h2>4. お子様のプライバシー</h2>
 <p>本アプリは13歳未満のお子様を対象としていません。13歳未満の方から意図的に個人情報を収集することはありません。</p>
@@ -68,7 +96,7 @@
 <!-- English -->
 <section lang="en">
 <h2>Privacy Policy</h2>
-<p>Last updated: March 7, 2026</p>
+<p>Last updated: March 29, 2026</p>
 
 <p>OtakuIQ ("the App") respects your privacy and is committed to protecting your personal information. This policy describes the data the App collects and how it is used.</p>
 
@@ -79,9 +107,23 @@
 <li>Quiz answer history, scores, and streak records</li>
 <li>App settings (theme, language, notification time, mute state)</li>
 </ul>
-<p>This data is stored only in your device's local storage (SharedPreferences) and is never sent to external servers.</p>
+<p>This data is stored in your device's local storage (SharedPreferences).</p>
 
-<p><strong>(b) Firebase Analytics / Crashlytics</strong></p>
+<p><strong>(b) Google Account Linking (optional)</strong></p>
+<p>The App offers optional Google Account linking. When linked, the following data is collected via Firebase Authentication:</p>
+<ul>
+<li>Google Account email address, display name, and UID</li>
+</ul>
+<p>You can unlink your account at any time from the settings screen. All app features are available without linking.</p>
+
+<p><strong>(c) Cloud Firestore (linked accounts only)</strong></p>
+<p>For users who link their Google Account, the following data is stored in Google Cloud Firestore:</p>
+<ul>
+<li>Quiz scores, badges, streak records, and purchase status</li>
+</ul>
+<p>This data is not accessed after unlinking your account. It is used to restore data when reinstalling the App.</p>
+
+<p><strong>(d) Firebase Analytics / Crashlytics</strong></p>
 <p>The App uses Google Firebase to anonymously collect:</p>
 <ul>
 <li>App usage data (screen transitions, quiz start/complete events)</li>
@@ -90,14 +132,28 @@
 </ul>
 <p>This data does not personally identify you and is used solely to improve the App.</p>
 
-<p><strong>(c) Google AdMob</strong></p>
+<p><strong>(e) Google AdMob</strong></p>
 <p>The App uses Google AdMob for ad delivery. AdMob may use your device's advertising ID (GAID on Android) to personalize ads. On Android 13 and later, the App declares the AD_ID permission to access the advertising ID. You can reset or disable your advertising ID in your device settings. For details, see <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
 
+<p><strong>(f) In-App Purchases</strong></p>
+<p>The App offers in-app purchases via Google Play Billing. Payment information (such as credit card numbers) is never collected or stored by the App; it is processed entirely by Google Play.</p>
+
 <h2>2. Third-Party Sharing</h2>
-<p>The App transmits data to Google LLC through Firebase and AdMob as described above. We do not provide or sell user data to any other third parties.</p>
+<p>The App transmits data to Google LLC through Firebase, AdMob, and Google Play Billing as described above. We do not provide or sell user data to any other third parties.</p>
 
 <h2>3. Data Retention and Deletion</h2>
-<p>You can delete all on-device data at any time via "Reset Data" in the App's settings. Uninstalling the App removes all local data from your device.</p>
+
+<p><strong>Deleting on-device data</strong></p>
+<p>You can delete all on-device data (scores, badges, streaks, and settings) at any time via "Reset Data" in the App's settings. Uninstalling the App also removes all local data from your device.</p>
+
+<p><strong>Account and cloud data deletion</strong></p>
+<p>To unlink your Google Account, tap "Unlink Account" in the App's settings. When you unlink:</p>
+<ul>
+<li>Access to your cloud data (scores, badges, streaks, and purchase status) is stopped immediately</li>
+<li>Your account information in Firebase Authentication (email, display name, UID) is invalidated upon unlinking</li>
+<li>Data stored in Firestore is retained for up to 180 days in a state inaccessible to anyone, then automatically deleted</li>
+</ul>
+<p>If you would like immediate deletion of your data, please <a href="https://ko-fi.com/otakuiq">contact us</a>. We will process your request within 30 days.</p>
 
 <h2>4. Children's Privacy</h2>
 <p>The App is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
