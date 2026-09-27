@@ -29,6 +29,7 @@
 <ul>
 <li>お気に入りの VTuber チャンネル ID リスト</li>
 <li>視聴済み配信の履歴（30 日で自動削除）</li>
+<li>推し活記録（月ごとの視聴回数と、配信をみた日）</li>
 <li>アプリ設定（言語）</li>
 </ul>
 <p>これらのデータは端末のローカルストレージ（SharedPreferences）に保存されます。</p>
@@ -37,9 +38,10 @@
 <p>本アプリは Google Firebase を利用します。</p>
 <ul>
 <li>匿名認証で発行される Firebase UID（個人を特定しないランダムな識別子）</li>
-<li>お気に入り VTuber と視聴履歴のクラウド同期（同一 Google アカウント内でのデータ引き継ぎ用）</li>
+<li>お気に入り VTuber・視聴履歴・推し活記録のバックアップ（上記の匿名 ID に紐づけて保存）</li>
+<li>通知の設定（言語、未視聴ダイジェストを送るかどうか）</li>
 </ul>
-<p>これらのデータは個人を特定するものではなく、複数端末間のデータ同期にのみ使用します。</p>
+<p>これらのデータは個人を特定するものではなく、バックアップと通知の送信にのみ使用します。匿名 ID はアプリの再インストールやデータの消去で変わるため、バックアップは別の端末や再インストール後には引き継がれません。</p>
 
 <p><strong>(c) Firebase Analytics / Crashlytics / Cloud Messaging</strong></p>
 <p>本アプリは以下のデータを匿名で収集します。</p>
@@ -86,6 +88,7 @@
 <ul>
 <li>List of favorite VTuber channel IDs</li>
 <li>Watch history for streams (automatically deleted after 30 days)</li>
+<li>Activity log (monthly view counts and the days you watched)</li>
 <li>App settings (language)</li>
 </ul>
 <p>This data is stored in your device's local storage (SharedPreferences).</p>
@@ -94,9 +97,10 @@
 <p>The App uses Google Firebase for:</p>
 <ul>
 <li>Anonymous authentication (a random Firebase UID that does not identify you)</li>
-<li>Cross-device sync of your oshi list and watch history within the same Google account</li>
+<li>Backup of your oshi list, watch history and activity log, stored under that anonymous ID</li>
+<li>Notification settings (language, whether to send the unwatched digest)</li>
 </ul>
-<p>This data does not personally identify you and is used solely for cross-device sync.</p>
+<p>This data does not personally identify you and is used solely for backup and for sending notifications. The anonymous ID changes when you reinstall the App or clear its data, so the backup is not carried over to another device or a fresh install.</p>
 
 <p><strong>(c) Firebase Analytics / Crashlytics / Cloud Messaging</strong></p>
 <p>The App anonymously collects:</p>
@@ -143,6 +147,7 @@
 <ul>
 <li>Daftar ID channel VTuber favorit</li>
 <li>Riwayat siaran yang sudah ditonton (dihapus otomatis setelah 30 hari)</li>
+<li>Catatan aktivitas (jumlah tontonan bulanan dan hari Anda menonton)</li>
 <li>Pengaturan aplikasi (bahasa)</li>
 </ul>
 <p>Data ini disimpan di penyimpanan lokal perangkat Anda (SharedPreferences).</p>
@@ -151,9 +156,10 @@
 <p>Aplikasi menggunakan Google Firebase untuk:</p>
 <ul>
 <li>Autentikasi anonim (Firebase UID acak yang tidak mengidentifikasi Anda)</li>
-<li>Sinkronisasi daftar oshi dan riwayat tonton lintas perangkat pada akun Google yang sama</li>
+<li>Cadangan daftar oshi, riwayat tonton, dan catatan aktivitas, disimpan dengan ID anonim tersebut</li>
+<li>Pengaturan notifikasi (bahasa, dikirim atau tidaknya ringkasan belum ditonton)</li>
 </ul>
-<p>Data ini tidak mengidentifikasi Anda secara pribadi dan hanya digunakan untuk sinkronisasi data.</p>
+<p>Data ini tidak mengidentifikasi Anda secara pribadi dan hanya digunakan untuk cadangan dan pengiriman notifikasi. ID anonim berubah saat Anda memasang ulang Aplikasi atau menghapus datanya, sehingga cadangan tidak terbawa ke perangkat lain atau pemasangan baru.</p>
 
 <p><strong>(c) Firebase Analytics / Crashlytics / Cloud Messaging</strong></p>
 <p>Aplikasi mengumpulkan data anonim:</p>
